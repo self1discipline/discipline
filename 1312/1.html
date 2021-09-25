@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>登录界面</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+
+</head>
+
+<body>
+    <form id="login" action="#" method="GET" enctype="multipart/form-data">
+        <div class="container">
+            <div class="image">
+                <img src="images/bg.jpg">
+            </div>
+            <div class="login">
+                <!--<div style="background: url(images/bg.jpg);width: 600px;height: 500px;"></div>-->
+                <h2>用户登录</h2>
+                <div class="buttons">
+                    <a href="1.html">用户登录</a>
+                    <a href="2.html">管理员登录</a>
+                </div>
+                <div class="box">
+                    <input type="text" name="user_phone" required="required"><label>手机号</label>
+                </div>
+                <div class="box">
+                    <input type="password" name="user_password" required="required">
+                    <label>密码</label>
+                </div>
+                <div class="in">
+                    <a href="#" onclick="timelate()">
+            登录
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+                </div>
+                <div class="regist">
+                    <p>还没账号？</p>
+                    <a href="# " onclick="doSomething()">注册</a>
+                </div>
+                <div class="password">
+                    <a href="#" onclick="timelate()">忘记密码?</a>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</body>
+<script>
+    function timelate() {
+        window.location.href = "forget.html";
+    }
+
+    function doSomething() {
+        window.location.href = "regist.html";
+    }
+</script>
+
+</html>

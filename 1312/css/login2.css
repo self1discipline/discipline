@@ -1,0 +1,173 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#141, aqua);
+    height: 100vh;
+    background-size: 100% 100%;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    padding: 40px;
+    height: 500px;
+    border-radius: 20px;
+    background-color: #f3eded;
+}
+
+.login h2 {
+    color: rgb(32, 20, 1);
+    margin-bottom: 20px;
+    height: 30px;
+}
+
+.login .box,
+.login .box1 {
+    position: relative;
+    width: 100%;
+    height: 80px;
+}
+
+.login .box input {
+    outline: none;
+    border: none;
+    width: 75%;
+    padding: 15px;
+    color: rgb(27, 3, 3);
+    font-size: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    /*border-bottom: 1px solid rgb(22, 2, 2);*/
+    background-color: transparent;
+}
+
+.login .box1 input {
+    outline: none;
+    border: none;
+    width: 29%;
+    padding: 15px;
+    color: rgb(27, 3, 3);
+    font-size: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    /*border-bottom: 1px solid rgb(22, 2, 2);*/
+    background-color: transparent;
+}
+
+.login .box label {
+    position: relative;
+    top: -36px;
+    left: 0;
+    padding: 1px 155px 0px 96px;
+    color: rgba(0, 0, 0, 0.25);
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+
+/*触发时样式(focus),valid检测合法*/
+
+.login .in a {
+    position: relative;
+    padding: 10px 100px;
+    color: #fff;
+    text-decoration: none;
+    background: cadetblue;
+    border-radius: 20px;
+    top: 20px;
+}
+
+.login .in a:hover {
+    border-radius: 20px;
+    background-color: rgb(73, 119, 121);
+}
+
+.regist a {
+    position: relative;
+    top: 56px;
+    right: 42px;
+    width: 110px;
+    text-decoration: none;
+}
+
+.regist p {
+    position: relative;
+    top: 78px;
+    right: 123px;
+    width: 110px;
+}
+
+.password a {
+    text-decoration: none;
+    position: relative;
+    top: 35px;
+    left: 126px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 53px;
+    border-radius: 46%;
+    background-color: aquamarine;
+}
+
+.buttons a {
+    text-align: center;
+    text-decoration: none;
+    margin-left: 12px;
+    margin-top: 16px;
+    /*padding: 0px 0px 0px 85px;*/
+    width: 500px;
+}
+
+.image img {
+    width: 800px;
+    height: 500px;
+}
+
+.container {
+    width: 1200px;
+    height: 500px;
+    margin: 80px auto 100px auto;
+    background: #fff;
+    overflow: hidden;
+}
+
+.password1 a {
+    text-decoration: none;
+    position: relative;
+    top: 77px;
+    left: 126px;
+}
+
+.login .box1 .send-sms {
+    position: relative;
+    border: 1px cadetblue solid;
+    border-radius: 4px;
+    background-color: cadetblue;
+    box-shadow: 0 5px 8px 0 rgb(24 95 255 / 10%);
+    color: #fff;
+    text-align: center;
+    font-weight: lighter;
+    float: right;
+    width: 221px;
+    height: 50px;
+    line-height: 45px;
+    font-size: 20px;
+    right: 47px;
+    text-decoration: none;
+}
+
+.login .box1 .send-sms:hover {
+    background-color: rgb(70, 117, 119);
+}

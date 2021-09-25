@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>点击文字弹出一个DIV层窗口代码</title>
+    <style>
+        .black_overlay {
+            display: none;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 800;
+            -moz-opacity: 0.8;
+            opacity: .80;
+            filter: alpha(opacity=88);
+        }
+        
+        .white_content {
+            display: none;
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            width: 900px;
+            height: 550px;
+            padding: 40px;
+            background-color: white;
+            z-index: 1002;
+            overflow: auto;
+        }
+        
+        .div_title a {
+            display: flex;
+            position: absolute;
+            margin-top: -30px;
+            text-decoration: none;
+            font-size: large;
+            color: black;
+            margin-left: 906px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <p>示例弹出层：<a href="JavaScript:void(0)" onclick="openDialog()">请点这里</a></p>
+    <div id="light" class="white_content">
+        <div class="div_title">
+            <a href="#" onclick="closeDialog()">X</a> </div>
+        <OBJECT classid=" CLSID:8856F961-340A-11D0-A96B-00C04FD705A2 " height="0 " id="wb " name="wb " width="3 "></OBJECT>
+        <!--<div style="float: right;width: 98%;margin-bottom: 10px;margin-top: 10px ">
+                <input id="print_btn " type="button " class="func-button " style="float: right; " value="打印 " onclick="doPrint() " />
+            </div>-->
+        <br>
+        <!--startprint-->
+        <br>
+        <br>
+        <div style="width:98%;text-align: center;font-size:20px;margin-top: -20px;margin-bottom: 5px; ">
+            <strong>实 验 室 情 况 一 览 表</strong>
+        </div>
+        <br>
+        <table width="98% " border="1px " cellpadding="0 " cellspacing="0 " style="font-size: 13px;text-align: center;margin-left: 10px;border-collapse: collapse; ">
+            <tr style="height: 30px; ">
+                <td style="width: 270px;background-color: #DBDBDE ">实验室</td>
+                <td style="width: 50%; ">
+                    <span class=" name ">17508</span>
+                </td>
+
+                <td colspan="2 " rowspan="6 " align="center ">
+                    <div style="width:97%;height:99%; ">
+                        <img height="200px " width="300px " src="/sams/jqFileUploadAction.do?method=getFullFile&fileId=2147003080 ">
+                    </div>
+                </td>
+            </tr>
+            <tr style="height: 30px ">
+                <td style="width: 130px;background-color: #DBDBDE ">所属单位</td>
+                <td class="w140 ">
+                    <span class="name ">海凌科技园</span>
+                </td>
+
+            </tr>
+            <tr style="height: 30px ">
+                <td style="width: 130px;background-color: #DBDBDE ">消毒情况</td>
+                <td class="w140 ">
+                    <span class="name ">已消毒</span>
+                </td>
+
+            </tr>
+            <tr style="height: 30px ">
+                <td style="width: 130px;background-color: #DBDBDE ">预约状况</td>
+                <td class="w140 ">
+                    <span class="name ">可预约</span>
+                </td>
+
+            </tr>
+            <tr style="height: 30px ">
+                <td style="width: 130px;background-color: #DBDBDE ">预约审核人</td>
+                <td class="w140 ">
+                    <span class="w140 name ">何晰嵩</span>
+                </td>
+
+            </tr>
+            <tr style="height: 30px ">
+                <td style="width: 130px;background-color: #DBDBDE ">实验器材工作状态</td>
+                <td class="w140 ">
+                    <span class="w140 name ">正常</span>
+                </td>
+
+            </tr>
+
+            <tr style="height: 30px ">
+                <td style="width: 130px;background-color: #DBDBDE ">几种适用于的实验</td>
+                <td colspan="5 " align="center ">
+                    <span>空气中氢气密度，氩气密度等等</span>
+                </td>
+
+            </tr>
+            <tr style="height: 30px ">
+                <td style="width: 130px;background-color: #DBDBDE ">实验仪器</td>
+                <td colspan="5 " align="center">
+                    <span>启普发生器，烧杯，集气瓶</span>
+                </td>
+            </tr>
+            <tr style="height: 30px ">
+                <td style="width: 130px;background-color: #DBDBDE ">备注</td>
+                <td colspan="5 " align="left ">
+                    <span></span>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <div style="width:98%;text-align: center;font-size:15px;margin-top: 5px;margin-bottom: 5px; ">
+            <strong>实验室收费信息</strong>
+        </div>
+        <table id="detail " width="98% " border="1 " class="table_detail " style="font-size: 13px;text-align: center;margin-left: 10px;border-collapse: collapse; ">
+            <thead>
+                <tr align="center " <th>
+                    </th>
+                    <th>对外服务价格</th>
+                </tr>
+            </thead>
+            <tbody align="center ">
+                <tr>
+
+                    <td>800-时间计费</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--endprint-->
+    </div>
+    <div id="fade" class="black_overlay"></div>
+</body>
+<script type="text/javascript ">
+    $(function() {})
+
+    function openDialog() {
+        document.getElementById('light').style.display = 'block';
+        document.getElementById('fade').style.display = 'block'
+    }
+
+    function closeDialog() {
+        document.getElementById('light').style.display = 'none';
+        document.getElementById('fade').style.display = 'none'
+    }
+</script>
+
+</html>

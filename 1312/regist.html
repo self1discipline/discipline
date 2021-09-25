@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>注册界面</title>
+    <link rel="stylesheet" type="text/css" href="css/login1.css">
+</head>
+
+<body>
+    <form id="login" action="#" method="GET" enctype="multipart/form-data">
+        <div class="login">
+            <!--<div style="background: url(images/bg.jpg);width: 600px;height: 500px;"></div>-->
+            <h2>注册</h2>
+            <div class="box">
+                姓名：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" name="named" required="required" placeholder="请填写姓名">
+            </div>
+            <div class="box">
+                身份证：&nbsp;&nbsp;&nbsp;
+                <input type="password" name="identity" required="required" placeholder="请填写身份证">
+            </div>
+            <div class="box">
+                密码：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="password" name="password" required="required" placeholder="请填写密码">
+            </div>
+            <div class="box">
+                确认密码：
+                <input type="password" name="ispassword" required="required" placeholder="请确认密码">
+            </div>
+            <div class="box">
+                手机号：&nbsp;&nbsp;&nbsp;
+                <input type="text" name="phone" required="required" placeholder="请填写手机号">
+            </div>
+            <div class="box1">
+                验证码：&nbsp;&nbsp;&nbsp;
+                <input type="text" name="captcha" required="required" placeholder="请填写验证码">
+                <a href="javascript:void(0)" id="send-sms" class="send-sms" data-bind="text: send_sms, click: sendSMS, css: {disabled: send_sms() != str().send_sms || typeof phoneStatus() === 'string'}, hasHover: sendSMSHover" tabindex="6">发送短信验证码</a>
+            </div>
+            <div class="in">
+                <a href="#">
+            登录
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
